@@ -10,6 +10,7 @@ class InstaPost extends StatelessWidget {
     return DefaultTabController(
         length: 3,
         child: Scaffold(
+            extendBody: true,
             body: SafeArea(
               child: Padding(
                 padding: const EdgeInsets.all(15.0),
