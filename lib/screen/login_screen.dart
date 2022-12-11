@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter_application_1/widget/circle_column.dart';
 
 class LoginScreenPractice extends StatefulWidget {
   const LoginScreenPractice({super.key});
@@ -15,8 +16,8 @@ class _LoginScreenPracticeState extends State<LoginScreenPractice> {
     return Scaffold(
         body: Stack(children: [
       Container(
-        height: double.infinity,
-        width: double.infinity,
+        height: MediaQuery.of(context).size.height,
+        width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10), color: Color(0xff9F000F)),
       ),
@@ -61,73 +62,31 @@ class _LoginScreenPracticeState extends State<LoginScreenPractice> {
                       SizedBox(
                         width: 8,
                       ),
-                      Container(
-                        height: 30,
-                        width: 30,
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Colors.white.withOpacity(0.8)),
-                      ),
+                      FirstRow(),
                       SizedBox(
                         width: 8,
                       ),
-                      Container(
-                        height: 30,
-                        width: 30,
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Colors.white.withOpacity(0.8)),
-                      ),
+                      FirstRow(),
                       SizedBox(
                         width: 8,
                       ),
-                      Container(
-                        height: 30,
-                        width: 30,
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Colors.white.withOpacity(0.8)),
-                      ),
+                      FirstRow(),
                       SizedBox(
                         width: 8,
                       ),
-                      Container(
-                        height: 30,
-                        width: 30,
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Colors.white.withOpacity(0.8)),
-                      ),
+                      FirstRow(),
                       SizedBox(
                         width: 8,
                       ),
-                      Container(
-                        height: 30,
-                        width: 30,
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Colors.white.withOpacity(0.8)),
-                      ),
+                      FirstRow(),
                       SizedBox(
                         width: 8,
                       ),
-                      Container(
-                        height: 30,
-                        width: 30,
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Colors.white.withOpacity(0.8)),
-                      ),
+                      FirstRow(),
                       SizedBox(
                         width: 8,
                       ),
-                      Container(
-                        height: 30,
-                        width: 30,
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Colors.white.withOpacity(0.8)),
-                      ),
+                      FirstRow(),
                     ],
                   ),
                   SizedBox(

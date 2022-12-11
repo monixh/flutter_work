@@ -7,9 +7,11 @@ class FirstRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: Container(
-      child: TextField(),
-    ));
+    return Container(
+      height: 30,
+      width: 30,
+      decoration: BoxDecoration(
+          shape: BoxShape.circle, color: Colors.white.withOpacity(0.8)),
+    );
   }
 }
