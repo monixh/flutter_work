@@ -1,390 +1,185 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter_application_1/widget/circle_column.dart';
+import 'package:form_field_validator/form_field_validator.dart';
 
-class LoginScreenPractice extends StatefulWidget {
-  const LoginScreenPractice({super.key});
+class Loginscreen extends StatefulWidget {
+  const Loginscreen({super.key});
 
   @override
-  State<LoginScreenPractice> createState() => _LoginScreenPracticeState();
+  State<Loginscreen> createState() => _LoginscreenState();
 }
 
-class _LoginScreenPracticeState extends State<LoginScreenPractice> {
+class _LoginscreenState extends State<Loginscreen> {
+  final email_controller = TextEditingController();
+  final password_controller = TextEditingController();
+  bool hidePassword = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Stack(children: [
-      Container(
-        height: MediaQuery.of(context).size.height,
-        width: MediaQuery.of(context).size.width,
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10), color: Color(0xff9F000F)),
-      ),
-      Positioned(
-        top: 90,
-        child: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Stack(children: [
-            Container(
-              height: 500,
-              width: 360,
-              decoration: BoxDecoration(
-                  shape: BoxShape.rectangle,
-                  borderRadius: BorderRadius.circular(40),
-                  color: Color(0xffFBB917)),
+        body: SafeArea(
+      child: Form(
+        autovalidateMode: AutovalidateMode.disabled,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+                padding: const EdgeInsets.only(left: 330, top: 10),
+                child: Container(
+                  height: 40,
+                  width: 47,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.rectangle,
+                    borderRadius: BorderRadius.circular(5),
+                    border: Border.all(color: Color(0xff4b0082)),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 10, left: 10),
+                    child: Text(
+                      "Eng",
+                    ),
+                  ),
+                )),
+            Padding(
+              padding: const EdgeInsets.only(left: 20, top: 20),
+              child: Text(
+                "Welcome",
+                style: TextStyle(
+                    fontSize: 30, color: Color.fromARGB(255, 99, 2, 116)),
+              ),
             ),
-            Positioned(
-              top: 10,
-              left: 15,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
+            Padding(
+              padding: const EdgeInsets.only(
+                left: 20,
+              ),
+              child: Row(
                 children: [
-                  Row(
-                    children: [
-                      Container(
-                        height: 30,
-                        width: 30,
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Colors.white.withOpacity(0.8)),
-                      ),
-                      SizedBox(
-                        width: 8,
-                      ),
-                      Container(
-                        height: 30,
-                        width: 30,
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Colors.white.withOpacity(0.8)),
-                      ),
-                      SizedBox(
-                        width: 8,
-                      ),
-                      FirstRow(),
-                      SizedBox(
-                        width: 8,
-                      ),
-                      FirstRow(),
-                      SizedBox(
-                        width: 8,
-                      ),
-                      FirstRow(),
-                      SizedBox(
-                        width: 8,
-                      ),
-                      FirstRow(),
-                      SizedBox(
-                        width: 8,
-                      ),
-                      FirstRow(),
-                      SizedBox(
-                        width: 8,
-                      ),
-                      FirstRow(),
-                      SizedBox(
-                        width: 8,
-                      ),
-                      FirstRow(),
-                    ],
+                  Text(
+                    "to",
+                    style: TextStyle(
+                        fontSize: 20, color: Color.fromARGB(255, 99, 2, 116)),
                   ),
                   SizedBox(
-                    height: 10,
+                    width: 10,
                   ),
-                  Row(
-                    children: [
-                      Container(
-                        height: 30,
-                        width: 30,
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Colors.white.withOpacity(0.6)),
-                      ),
-                      SizedBox(
-                        width: 8,
-                      ),
-                      Container(
-                        height: 30,
-                        width: 30,
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Colors.white.withOpacity(0.6)),
-                      ),
-                      SizedBox(
-                        width: 8,
-                      ),
-                      Container(
-                        height: 30,
-                        width: 30,
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Colors.white.withOpacity(0.6)),
-                      ),
-                      SizedBox(
-                        width: 8,
-                      ),
-                      Container(
-                        height: 30,
-                        width: 30,
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Colors.white.withOpacity(0.6)),
-                      ),
-                      SizedBox(
-                        width: 8,
-                      ),
-                      Container(
-                        height: 30,
-                        width: 30,
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Colors.white.withOpacity(0.6)),
-                      ),
-                      SizedBox(
-                        width: 8,
-                      ),
-                      Container(
-                        height: 30,
-                        width: 30,
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Colors.white.withOpacity(0.6)),
-                      ),
-                      SizedBox(
-                        width: 8,
-                      ),
-                      Container(
-                        height: 30,
-                        width: 30,
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Colors.white.withOpacity(0.6)),
-                      ),
-                      SizedBox(
-                        width: 8,
-                      ),
-                      Container(
-                        height: 30,
-                        width: 30,
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Colors.white.withOpacity(0.6)),
-                      ),
-                      SizedBox(
-                        width: 8,
-                      ),
-                      Container(
-                        height: 30,
-                        width: 30,
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Colors.white.withOpacity(0.6)),
-                      ),
-                    ],
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Row(
-                    children: [
-                      Container(
-                        height: 30,
-                        width: 30,
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Colors.white.withOpacity(0.4)),
-                      ),
-                      SizedBox(
-                        width: 8,
-                      ),
-                      Container(
-                        height: 30,
-                        width: 30,
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Colors.white.withOpacity(0.4)),
-                      ),
-                      SizedBox(
-                        width: 8,
-                      ),
-                      Container(
-                        height: 30,
-                        width: 30,
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Colors.white.withOpacity(0.4)),
-                      ),
-                      SizedBox(
-                        width: 8,
-                      ),
-                      Container(
-                        height: 30,
-                        width: 30,
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Colors.white.withOpacity(0.4)),
-                      ),
-                      SizedBox(
-                        width: 8,
-                      ),
-                      Container(
-                        height: 30,
-                        width: 30,
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Colors.white.withOpacity(0.4)),
-                      ),
-                      SizedBox(
-                        width: 8,
-                      ),
-                      Container(
-                        height: 30,
-                        width: 30,
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Colors.white.withOpacity(0.4)),
-                      ),
-                      SizedBox(
-                        width: 8,
-                      ),
-                      Container(
-                        height: 30,
-                        width: 30,
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Colors.white.withOpacity(0.4)),
-                      ),
-                      SizedBox(
-                        width: 8,
-                      ),
-                      Container(
-                        height: 30,
-                        width: 30,
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Colors.white.withOpacity(0.4)),
-                      ),
-                      SizedBox(
-                        width: 8,
-                      ),
-                      Container(
-                        height: 30,
-                        width: 30,
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Colors.white.withOpacity(0.4)),
-                      ),
-                    ],
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Row(
-                    children: [
-                      Container(
-                        height: 30,
-                        width: 30,
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Colors.white.withOpacity(0.2)),
-                      ),
-                      SizedBox(
-                        width: 8,
-                      ),
-                      Container(
-                        height: 30,
-                        width: 30,
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Colors.white.withOpacity(0.2)),
-                      ),
-                      SizedBox(
-                        width: 8,
-                      ),
-                      Container(
-                        height: 30,
-                        width: 30,
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Colors.white.withOpacity(0.2)),
-                      ),
-                      SizedBox(
-                        width: 8,
-                      ),
-                      Container(
-                        height: 30,
-                        width: 30,
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Colors.white.withOpacity(0.2)),
-                      ),
-                      SizedBox(
-                        width: 8,
-                      ),
-                      Container(
-                        height: 30,
-                        width: 30,
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Colors.white.withOpacity(0.2)),
-                      ),
-                      SizedBox(
-                        width: 8,
-                      ),
-                      Container(
-                        height: 30,
-                        width: 30,
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Colors.white.withOpacity(0.2)),
-                      ),
-                      SizedBox(
-                        width: 8,
-                      ),
-                      Container(
-                        height: 30,
-                        width: 30,
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Colors.white.withOpacity(0.2)),
-                      ),
-                      SizedBox(
-                        width: 8,
-                      ),
-                      Container(
-                        height: 30,
-                        width: 30,
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Colors.white.withOpacity(0.2)),
-                      ),
-                      SizedBox(
-                        width: 8,
-                      ),
-                      Container(
-                        height: 30,
-                        width: 30,
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Colors.white.withOpacity(0.2)),
-                      ),
-                    ],
-                  ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  Text("Login",
-                      style: TextStyle(
+                  Text(
+                    "Khalti",
+                    style: TextStyle(
+                        fontSize: 25,
                         fontWeight: FontWeight.bold,
-                        fontSize: 30,
-                      )),
+                        color: Color.fromARGB(255, 99, 2, 116)),
+                  ),
                 ],
               ),
             ),
-          ]),
+            Padding(
+              padding: const EdgeInsets.only(left: 20, top: 5),
+              child: Text(
+                "Sign in to your Khalti Account",
+                style: TextStyle(
+                    color: Colors.black45, fontWeight: FontWeight.bold),
+              ),
+            ),
+            SizedBox(
+              height: 7,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TextFormField(
+                controller: email_controller,
+                validator: EmailValidator(errorText: "Invalid Email"),
+                decoration: InputDecoration(
+                  focusedErrorBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.red),
+                      borderRadius: BorderRadius.circular(10)),
+                  focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.green),
+                      borderRadius: BorderRadius.circular(10)),
+                  hintText: "Mobile Number / Email",
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      borderSide: BorderSide(color: Colors.purple)),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 7,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TextFormField(
+                controller: password_controller,
+                obscureText: hidePassword,
+                validator: MultiValidator([
+                  RequiredValidator(errorText: "Password is required"),
+                  MinLengthValidator(5,
+                      errorText: "Password must have at least 5 characters"),
+                  PatternValidator(r'(?=.*?[#?!@$%^&*-])',
+                      errorText: "password must have special characters")
+                ]),
+                decoration: InputDecoration(
+                  hintText: "Password",
+                  suffixIcon: InkWell(
+                      onTap: () {
+                        hidePassword = !hidePassword;
+                        setState(() {});
+                      },
+                      child: Icon(hidePassword == true
+                          ? Icons.visibility_outlined
+                          : Icons.visibility_off_outlined)),
+                  focusedErrorBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.red),
+                      borderRadius: BorderRadius.circular(10)),
+                  focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.green),
+                      borderRadius: BorderRadius.circular(10)),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10),
+                    borderSide: BorderSide(color: Colors.purple),
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 250),
+              child: Text(
+                "FORGOT PASSWORD",
+                style: TextStyle(
+                    fontWeight: FontWeight.bold, color: Colors.black54),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(15.0),
+              child: MaterialButton(
+                onPressed: () {},
+                minWidth: double.infinity,
+                color: Color.fromARGB(255, 99, 2, 116),
+                child: InkWell(
+                  child: Text(
+                    "Login",
+                    style: TextStyle(
+                        color: Colors.white, fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 7,
+            ),
+            Center(child: Text("New User?")),
+            SizedBox(
+              height: 7,
+            ),
+            Center(
+              child: Text(
+                "CREATE AN ACCOUNT",
+                style: TextStyle(
+                    color: Colors.purple, fontWeight: FontWeight.bold),
+              ),
+            )
+          ],
         ),
       ),
-    ]));
+    ));
   }
 }

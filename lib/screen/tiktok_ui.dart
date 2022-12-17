@@ -202,14 +202,13 @@ class TiktokUI extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: Color.fromARGB(255, 139, 0, 0),
-          items: [
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-            BottomNavigationBarItem(icon: Icon(Icons.show_chart), label: "Now"),
-            BottomNavigationBarItem(icon: Icon(Icons.inbox), label: "Inbox"),
-            BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
-          ]),
+      bottomNavigationBar:
+          BottomNavigationBar(backgroundColor: Colors.yellow, items: [
+        BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+        BottomNavigationBarItem(icon: Icon(Icons.show_chart), label: "Now"),
+        BottomNavigationBarItem(icon: Icon(Icons.inbox), label: "Inbox"),
+        BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
+      ]),
     );
   }
 }
